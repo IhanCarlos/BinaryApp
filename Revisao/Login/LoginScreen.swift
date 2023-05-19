@@ -274,7 +274,7 @@ class LoginScreen: UIView {
             loginButton.heightAnchor.constraint(equalToConstant: 45),
             loginButton.widthAnchor.constraint(equalToConstant: 320),
             
-            registerButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            registerButton.bottomAnchor.constraint(equalTo: keyboardLayoutGuide.topAnchor),
             registerButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             registerButton.heightAnchor.constraint(equalToConstant: 45),
             registerButton.widthAnchor.constraint(equalToConstant: 320),

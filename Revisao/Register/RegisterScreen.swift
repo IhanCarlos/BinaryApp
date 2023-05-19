@@ -88,7 +88,7 @@ class RegisterScreen: UIView {
         txt.borderStyle = .roundedRect
         txt.keyboardType = .default
         txt.placeholder = "Digite sua senha"
-        txt.isSecureTextEntry = true
+        //txt.isSecureTextEntry = true
         txt.textColor = .darkGray
         txt.layer.shadowOpacity = 1
         txt.layer.shadowOffset = CGSize(width: 0, height: -2)
@@ -199,6 +199,12 @@ class RegisterScreen: UIView {
        // let years:String = self.yearsTextField.text ?? ""
         
         if !email.isEmpty && !password.isEmpty && !passwordConfirmed.isEmpty && !cpfText.isEmpty {
+            self.configButtonEnable(enable: true)
+        }else{
+            self.configButtonEnable(enable: false)
+        }
+        
+        if password == passwordConfirmed {
             self.configButtonEnable(enable: true)
         }else{
             self.configButtonEnable(enable: false)
