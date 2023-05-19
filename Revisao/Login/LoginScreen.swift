@@ -29,7 +29,7 @@ class LoginScreen: UIView {
     lazy var backgroundImage: UIImageView = {
        let img = UIImageView()
         img.translatesAutoresizingMaskIntoConstraints = false
-        img.image = UIImage(named: "Binancy")
+        img.image = UIImage(named: "Binary")
         return img
     }()
     
@@ -38,7 +38,6 @@ class LoginScreen: UIView {
         l.translatesAutoresizingMaskIntoConstraints = false
         l.textColor = .white
         l.text = "Binary"
-        l.textColor = .white
         l.font = UIFont.systemFont(ofSize: 40, weight: .bold)
         return l
     }()
@@ -65,7 +64,8 @@ class LoginScreen: UIView {
         txt.autocorrectionType = .no
         txt.backgroundColor = .white
         txt.borderStyle = .roundedRect
-        txt.keyboardType = .emailAddress
+//        txt.keyboardType = .emailAddress
+        txt.keyboardType = .asciiCapable
         txt.placeholder = "Digite seu email"
         txt.textColor = .darkGray
         txt.layer.shadowOpacity = 1
@@ -80,8 +80,10 @@ class LoginScreen: UIView {
         txt.autocorrectionType = .no
         txt.backgroundColor = .white
         txt.borderStyle = .roundedRect
-        txt.keyboardType = .default
+//        txt.keyboardType = .default
+        txt.keyboardType = .asciiCapable
         txt.placeholder = "Digite sua senha"
+        txt.isSecureTextEntry = true
         txt.textColor = .darkGray
         txt.layer.shadowOpacity = 1
         txt.layer.shadowOffset = CGSize(width: 0, height: -2)
@@ -257,12 +259,12 @@ class LoginScreen: UIView {
             descriptionLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
 
-            emailTextField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 150),
+            emailTextField.bottomAnchor.constraint(equalTo: passwordTextField.topAnchor, constant: -10),
             emailTextField.centerXAnchor.constraint(equalTo: centerXAnchor),
             emailTextField.heightAnchor.constraint(equalToConstant: 45),
             emailTextField.widthAnchor.constraint(equalToConstant: 320),
             
-            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 10),
+            passwordTextField.bottomAnchor.constraint(equalTo: loginButton.topAnchor, constant: -30),
             passwordTextField.centerXAnchor.constraint(equalTo: centerXAnchor),
             passwordTextField.heightAnchor.constraint(equalToConstant: 45),
             passwordTextField.widthAnchor.constraint(equalToConstant: 320),

@@ -9,9 +9,10 @@ import Foundation
 
 struct cardDatail{
     var titleState: String?
-    var nameImage: String?
+    var nameImage: String
     var saldoTitle: String?
-    var simbol: String?
+    var simbol: String
+    
 }
 
 var CardData = [
@@ -22,10 +23,10 @@ var CardData = [
         saldoTitle: "40.248,98",
         simbol: "brazilianrealsign.circle.fill"
     ),
-
+    
     cardDatail(
         titleState: "Saldo em Conta Global Dólar",
-        nameImage: "uea",
+        nameImage: "eud",
         saldoTitle: "2.378,22",
         simbol: "banknote.fill"
     ),
@@ -37,3 +38,4 @@ var CardData = [
         simbol: "eurosign.circle.fill"
     )
 ]
+

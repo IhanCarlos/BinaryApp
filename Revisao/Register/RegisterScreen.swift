@@ -88,6 +88,7 @@ class RegisterScreen: UIView {
         txt.borderStyle = .roundedRect
         txt.keyboardType = .default
         txt.placeholder = "Digite sua senha"
+        txt.isSecureTextEntry = true
         txt.textColor = .darkGray
         txt.layer.shadowOpacity = 1
         txt.layer.shadowOffset = CGSize(width: 0, height: -2)
@@ -125,15 +126,11 @@ class RegisterScreen: UIView {
         return txt
     }()
     
-    lazy var yearsTextField:UITextField = {
-        let txt = UITextField()
+    lazy var yearsTextField:UIDatePicker = {
+        let txt = UIDatePicker()
         txt.translatesAutoresizingMaskIntoConstraints = false
-        txt.autocorrectionType = .no
         txt.backgroundColor = .white
-        txt.borderStyle = .roundedRect
-        txt.keyboardType = .numberPad
-        txt.placeholder = "Data de nascimento 00/00/00"
-        txt.textColor = .darkGray
+        txt.datePickerMode = .date
         txt.layer.shadowOpacity = 1
         txt.layer.shadowOffset = CGSize(width: 0, height: -2)
         txt.layer.shadowRadius = 10
@@ -183,7 +180,7 @@ class RegisterScreen: UIView {
         self.passwordTextField.delegate = delegate
         self.passwordConfirmedTextField.delegate = delegate
         self.cpfTextField.delegate = delegate
-        self.yearsTextField.delegate = delegate
+       // self.yearsTextField.delegate = delegate
     }
     
     @objc private func tappedBackButton() {
@@ -199,9 +196,9 @@ class RegisterScreen: UIView {
         let password:String = self.passwordTextField.text ?? ""
         let passwordConfirmed:String = self.passwordConfirmedTextField.text ?? ""
         let cpfText:String = self.cpfTextField.text ?? ""
-        let years:String = self.yearsTextField.text ?? ""
+       // let years:String = self.yearsTextField.text ?? ""
         
-        if !email.isEmpty && !password.isEmpty && !passwordConfirmed.isEmpty && !cpfText.isEmpty && years.isEmpty {
+        if !email.isEmpty && !password.isEmpty && !passwordConfirmed.isEmpty && !cpfText.isEmpty {
             self.configButtonEnable(enable: true)
         }else{
             self.configButtonEnable(enable: false)
@@ -256,27 +253,27 @@ class RegisterScreen: UIView {
             titleLabel.leadingAnchor.constraint(equalTo: logoImage.trailingAnchor, constant: 2),
             titleLabel.centerYAnchor.constraint(equalTo: logoImage.centerYAnchor),
             
-            emailTextField.topAnchor.constraint(equalTo: titleLabel.topAnchor, constant: 80),
+            emailTextField.topAnchor.constraint(equalTo: titleLabel.topAnchor, constant: 120),
             emailTextField.centerXAnchor.constraint(equalTo: centerXAnchor),
             emailTextField.heightAnchor.constraint(equalToConstant: 45),
             emailTextField.widthAnchor.constraint(equalToConstant: 320),
             
-            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 10),
+            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 20),
             passwordTextField.centerXAnchor.constraint(equalTo: centerXAnchor),
             passwordTextField.heightAnchor.constraint(equalToConstant: 45),
             passwordTextField.widthAnchor.constraint(equalToConstant: 320),
             
-            passwordConfirmedTextField.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 10),
+            passwordConfirmedTextField.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
             passwordConfirmedTextField.centerXAnchor.constraint(equalTo: centerXAnchor),
             passwordConfirmedTextField.heightAnchor.constraint(equalToConstant: 45),
             passwordConfirmedTextField.widthAnchor.constraint(equalToConstant: 320),
             
-            cpfTextField.topAnchor.constraint(equalTo: passwordConfirmedTextField.bottomAnchor, constant: 10),
+            cpfTextField.topAnchor.constraint(equalTo: passwordConfirmedTextField.bottomAnchor, constant: 20),
             cpfTextField.centerXAnchor.constraint(equalTo: centerXAnchor),
             cpfTextField.heightAnchor.constraint(equalToConstant: 45),
             cpfTextField.widthAnchor.constraint(equalToConstant: 320),
             
-            yearsTextField.topAnchor.constraint(equalTo: cpfTextField.bottomAnchor, constant: 10),
+            yearsTextField.topAnchor.constraint(equalTo: cpfTextField.bottomAnchor, constant: 20),
             yearsTextField.centerXAnchor.constraint(equalTo: centerXAnchor),
             yearsTextField.heightAnchor.constraint(equalToConstant: 45),
             yearsTextField.widthAnchor.constraint(equalToConstant: 320),
