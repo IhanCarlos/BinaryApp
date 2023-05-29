@@ -14,7 +14,6 @@ class HomeViewController: UIViewController {
     override func loadView() {
         self.homeScreen = HomeSreen()
         self.view = homeScreen
-        view.backgroundColor = .lightGray
     }
 
     override func viewDidLoad() {

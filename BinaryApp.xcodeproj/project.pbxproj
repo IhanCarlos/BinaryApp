@@ -14,6 +14,7 @@
 		1E384FED29DE2D7C005B64C0 /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E384FEC29DE2D7C005B64C0 /* RegisterScreen.swift */; };
 		1E384FF229DF5F7C005B64C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E384FF129DF5F7C005B64C0 /* GoogleService-Info.plist */; };
 		1E5FBD2829E44B88007A3A98 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5FBD2729E44B88007A3A98 /* File.swift */; };
+		1E77C1D32A24EE03000BB762 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E77C1D22A24EE03000BB762 /* Extensions+UIView.swift */; };
 		1E87C34C2A02C150007B9D5D /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E87C34B2A02C150007B9D5D /* CardTableViewCell.swift */; };
 		1E87C34E2A02C2A1007B9D5D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E87C34D2A02C2A1007B9D5D /* CardView.swift */; };
 		1E87C3522A02F289007B9D5D /* AccountMovementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E87C3512A02F289007B9D5D /* AccountMovementsView.swift */; };
@@ -39,6 +40,7 @@
 		1E384FEC29DE2D7C005B64C0 /* RegisterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		1E384FF129DF5F7C005B64C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1E5FBD2729E44B88007A3A98 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		1E77C1D22A24EE03000BB762 /* Extensions+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		1E87C34B2A02C150007B9D5D /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		1E87C34D2A02C2A1007B9D5D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		1E87C3512A02F289007B9D5D /* AccountMovementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMovementsView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		1E384FEE29DE4F28005B64C0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1E2C4EDF29FC0BB300052CFE /* Cell  */,
 				1E2C4EE429FD90B700052CFE /* HomeSreen.swift */,
 				1E2C4EE629FD90CD00052CFE /* HomeViewController.swift */,
 				1E955B2C2A00AC1400519E9D /* Buttons */,
@@ -104,6 +107,14 @@
 				1E5FBD2729E44B88007A3A98 /* File.swift */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		1E77C1D12A24EDB4000BB762 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1E77C1D22A24EE03000BB762 /* Extensions+UIView.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		1E87C34F2A02F1D7007B9D5D /* Cards */ = {
@@ -155,8 +166,8 @@
 		1E90A76129DDBA7F00683F94 /* Revisao */ = {
 			isa = PBXGroup;
 			children = (
+				1E77C1D12A24EDB4000BB762 /* Utils */,
 				1E95D7C929F60531000D7000 /* Model */,
-				1E2C4EDF29FC0BB300052CFE /* Cell  */,
 				1E5FBD2629E44B6C007A3A98 /* Alert */,
 				1E90A77629DDC25E00683F94 /* Login */,
 				1E384FE929DE2C2F005B64C0 /* Register */,
@@ -328,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E77C1D32A24EE03000BB762 /* Extensions+UIView.swift in Sources */,
 				1E384FED29DE2D7C005B64C0 /* RegisterScreen.swift in Sources */,
 				1E95D7CB29F60531000D7000 /* CardModel.swift in Sources */,
 				1E90A76729DDBA7F00683F94 /* LoginViewController.swift in Sources */,
